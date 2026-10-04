@@ -36,6 +36,11 @@ section#experience{
     flex-direction: column;
     line-height: 3;
     color:#fff;
+    text-align: center;
+}
+section#experience .section-heading p{
+    font-size:3rem;
+    font-weight: 600;
 }
 section.about-me-section h1{
     font-size:4rem;
