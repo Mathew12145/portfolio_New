@@ -1,5 +1,7 @@
 let elementsSkipPhotoSection = document.querySelectorAll(".skip-photo-section p");
 let gallery = document.querySelector(".gallery");
+let navLinks = document.querySelectorAll('.nav-section ul li');
+let heroSection = document.querySelector('.hero');
 let ActualSlideIDX = 0;
 //Dla pierwszego
 elementsSkipPhotoSection.forEach((p, index) => {
@@ -35,4 +37,19 @@ function changeSlide(){
         elementsSkipPhotoSection[2].innerHTML = '&#9632';
     }
 }
-setInterval(changeSlide, 5000);
+const intervalSlides = setInterval(changeSlide, 5000);
+navLinks.forEach((li, index) => {
+    li.addEventListener("click", () => {
+        heroSection.style.transform = 'translateX(-100vw)';
+        clearInterval(intervalSlides);
+    })
+});
+
+document.querySelector('.link').addEventListener('click', function(e) {
+    e.preventDefault(); 
+    const targetUrl = this.href;
+    
+    setTimeout(function() {
+      window.location.href = targetUrl;
+    }, 3500);
+  });
