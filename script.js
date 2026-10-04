@@ -45,11 +45,14 @@ navLinks.forEach((li, index) => {
     })
 });
 
-document.querySelector('.link').addEventListener('click', function(e) {
-    e.preventDefault(); 
-    const targetUrl = this.href;
-    
-    setTimeout(function() {
-      window.location.href = targetUrl;
-    }, 3500);
-  });
+let links = document.querySelectorAll('.link');
+links.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); 
+        const targetUrl = this.href;
+        
+        setTimeout(function() {
+          window.location.href = targetUrl;
+        }, 3000);
+      });
+});

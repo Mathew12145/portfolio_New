@@ -15,14 +15,24 @@ section.hero{
     height:100vh;
     width: 100vw;
     overflow-x:hidden;
-    transition: 4s transform ease-in-out;
+    transition: 3s transform ease-in-out;
 }
 section.about-me-section{
     height:100vh;
     width: 100vw;
     display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    flex-direction: column;
+    line-height: 3;
+    color:#fff;
+}
+section#experience{
+    height:100vh;
+    width: 100vw;
+    display:flex;
+    align-items: center;
+    justify-content: start;
     flex-direction: column;
     line-height: 3;
     color:#fff;
@@ -35,9 +45,25 @@ section.about-me-section h1{
 section.about-me-section p{
     font-size:1.2rem;
     text-shadow:0px 0px 10px #000;
+    text-align: center;
 }
-.additional-class-about-me-section{
+.additional-class-sections{
     transition: 2s transform ease-in-out;
+}
+.arrow-container{
+    height:20vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:50px;
+    padding-right:50px;
+    margin-top:0px;
+}
+.arrow-container .left-arrow, .arrow-container .right-arrow{
+    font-size:2.3rem;
+    color:#fff;
+    cursor: pointer;
 }
 .nav-container{
     margin-top:20px;
@@ -60,7 +86,7 @@ section.about-me-section p{
     cursor:pointer;
     color:#fff;
 }
-.nav-container .nav-section ul a{
+a{
     text-decoration: none;
 }
 .nav-container .nav-section ul li:hover{
