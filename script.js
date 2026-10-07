@@ -15,7 +15,7 @@ function changeSlide(){
     ActualSlideIDX += 1;
     let offset = currentSlide * -100;
     gallery.style.transform = `translateX(${offset}vw)`;
-    if(currentSlide === 3){
+    if(currentSlide === 5){
         ActualSlideIDX = 0;
         currentSlide = 0;
         gallery.style.transform = `translateX(0vw)`;
@@ -25,16 +25,36 @@ function changeSlide(){
         elementsSkipPhotoSection[0].innerHTML = '&#9632';
         elementsSkipPhotoSection[1].innerHTML = '&#9633';
         elementsSkipPhotoSection[2].innerHTML = '&#9633';
+        elementsSkipPhotoSection[3].innerHTML = '&#9633';
+        elementsSkipPhotoSection[4].innerHTML = '&#9633';
     }
     if(ActualSlideIDX == 1){
         elementsSkipPhotoSection[0].innerHTML = '&#9633';
         elementsSkipPhotoSection[1].innerHTML = '&#9632';
         elementsSkipPhotoSection[2].innerHTML = '&#9633';
+        elementsSkipPhotoSection[3].innerHTML = '&#9633';
+        elementsSkipPhotoSection[4].innerHTML = '&#9633';
     }
     if(ActualSlideIDX == 2){
         elementsSkipPhotoSection[0].innerHTML = '&#9633';
         elementsSkipPhotoSection[1].innerHTML = '&#9633';
         elementsSkipPhotoSection[2].innerHTML = '&#9632';
+        elementsSkipPhotoSection[3].innerHTML = '&#9633';
+        elementsSkipPhotoSection[4].innerHTML = '&#9633';
+    }
+    if(ActualSlideIDX == 3){
+        elementsSkipPhotoSection[0].innerHTML = '&#9633';
+        elementsSkipPhotoSection[1].innerHTML = '&#9633';
+        elementsSkipPhotoSection[2].innerHTML = '&#9633';
+        elementsSkipPhotoSection[3].innerHTML = '&#9632';
+        elementsSkipPhotoSection[4].innerHTML = '&#9633';
+    }
+    if(ActualSlideIDX == 4){
+        elementsSkipPhotoSection[0].innerHTML = '&#9633';
+        elementsSkipPhotoSection[1].innerHTML = '&#9633';
+        elementsSkipPhotoSection[2].innerHTML = '&#9633';
+        elementsSkipPhotoSection[3].innerHTML = '&#9633';
+        elementsSkipPhotoSection[4].innerHTML = '&#9632';
     }
 }
 const intervalSlides = setInterval(changeSlide, 5000);
