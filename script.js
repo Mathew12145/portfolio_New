@@ -15,7 +15,7 @@ function changeSlide(){
     ActualSlideIDX += 1;
     let offset = currentSlide * -100;
     gallery.style.transform = `translateX(${offset}vw)`;
-    if(currentSlide === 5){
+    if(currentSlide === 4){
         ActualSlideIDX = 0;
         currentSlide = 0;
         gallery.style.transform = `translateX(0vw)`;
