@@ -188,3 +188,16 @@ footer a{
     color:#fff;
     text-shadow: 1px 1px 10px #fff;
 }
+@media screen and (max-width: 768px){
+    .nav-container{
+        flex-direction: column;
+    }
+    .hero .gallery .about-me h1, .hero .gallery .experience h1 , .hero .gallery .contact h1, .hero .gallery .portfolio h1, .hero .gallery .skills h1{
+        font-size:3rem;
+    }
+    section.about-me-section h1{
+        font-size:3rem;
+        text-align:center;
+    }
+    
+}
