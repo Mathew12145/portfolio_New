@@ -26,53 +26,29 @@ function changeSlide(){
         elementsSkipPhotoSection[1].innerHTML = '&#9633';
         elementsSkipPhotoSection[2].innerHTML = '&#9633';
         elementsSkipPhotoSection[3].innerHTML = '&#9633';
-        elementsSkipPhotoSection[4].innerHTML = '&#9633';
     }
     if(ActualSlideIDX == 1){
         elementsSkipPhotoSection[0].innerHTML = '&#9633';
         elementsSkipPhotoSection[1].innerHTML = '&#9632';
         elementsSkipPhotoSection[2].innerHTML = '&#9633';
         elementsSkipPhotoSection[3].innerHTML = '&#9633';
-        elementsSkipPhotoSection[4].innerHTML = '&#9633';
     }
     if(ActualSlideIDX == 2){
         elementsSkipPhotoSection[0].innerHTML = '&#9633';
         elementsSkipPhotoSection[1].innerHTML = '&#9633';
         elementsSkipPhotoSection[2].innerHTML = '&#9632';
         elementsSkipPhotoSection[3].innerHTML = '&#9633';
-        elementsSkipPhotoSection[4].innerHTML = '&#9633';
     }
     if(ActualSlideIDX == 3){
         elementsSkipPhotoSection[0].innerHTML = '&#9633';
         elementsSkipPhotoSection[1].innerHTML = '&#9633';
         elementsSkipPhotoSection[2].innerHTML = '&#9633';
         elementsSkipPhotoSection[3].innerHTML = '&#9632';
-        elementsSkipPhotoSection[4].innerHTML = '&#9633';
-    }
-    if(ActualSlideIDX == 4){
-        elementsSkipPhotoSection[0].innerHTML = '&#9633';
-        elementsSkipPhotoSection[1].innerHTML = '&#9633';
-        elementsSkipPhotoSection[2].innerHTML = '&#9633';
-        elementsSkipPhotoSection[3].innerHTML = '&#9633';
-        elementsSkipPhotoSection[4].innerHTML = '&#9632';
     }
 }
 const intervalSlides = setInterval(changeSlide, 5000);
 navLinks.forEach((li, index) => {
     li.addEventListener("click", () => {
-        heroSection.style.transform = 'translateX(-100vw)';
         clearInterval(intervalSlides);
     })
-});
-
-let links = document.querySelectorAll('.link');
-links.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault(); 
-        const targetUrl = this.href;
-        
-        setTimeout(function() {
-          window.location.href = targetUrl;
-        }, 3000);
-      });
 });
